@@ -39,10 +39,16 @@ def prep_telco(df):
     df = df.drop(columns = cols_to_drop)
     df.total_charges = df.total_charges.replace(' ',0)
     df.total_charges = df.total_charges.astype(float)
+
+    #delete the following two rows if they break your code
+    df['monthly_charges_bins']= pd.qcut(df['monthly_charges'], 5)
+    df['total_charges_bins']= pd.qcut(df['total_charges'], 8)
+    #df.total_charges_bins = df.total_charges_bins.astype(float)
     cols_to_dummy = df[['gender','partner','dependents','phone_service','multiple_lines',
                         'online_security','online_backup','device_protection','tech_support','streaming_tv',
                         'streaming_movies','paperless_billing','churn','contract_type',
-                        'internet_service_type','payment_type']]
+                        'internet_service_type','payment_type', 'monthly_charges_bins',
+                        'total_charges_bins']]
     dummy_df = pd.get_dummies(cols_to_dummy, dummy_na=False, drop_first=True)
     df = pd.concat([df, dummy_df], axis = 1)
 
