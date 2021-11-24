@@ -54,6 +54,26 @@ def prep_telco(df):
 
     return df
 
+def cols_to_dummy(df):
+    """
+    This function dummies up all the string data columns of the dataframe into a new 
+    dataframe, concatenates it on the existing dataframe, and then drops the original 
+    columns. This will allow for easier modelling.
+    
+    """
+    cols_to_drop = ['customer_id','gender', 'partner', 'dependents', 'phone_service', 
+                    'multiple_lines', 'online_security','online_backup', 'device_protection',
+                    'tech_support', 'streaming_tv', 'streaming_movies','paperless_billing',
+                    'churn', 'contract_type', 'internet_service_type', 'payment_type'
+                    ]
+    dummy_df = pd.get_dummies(cols_to_drop, dummy_na=False, drop_first=True)
+    df = pd.concat([df, dummy_df], axis = 1)
+    df = df.drop(columns = cols_to_drop)
+    df = df.drop(columns = ['monthly_charges_bins','total_charges_bins'])
+
+    return df
+
+
 def split_telco_data(df):
     '''
     Takes in a the telco datafram and returns train, validate, test subsets. I have

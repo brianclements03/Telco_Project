@@ -72,3 +72,4 @@ Please note the following, user-defined functions used:
     -get_connection(db, user=user, host=host, password=password): uses my info from my env file to create a connection url to access the Codeup db. It takes in a string name of a database as an argument. The env file includes the username, password and host address as seen in the curly brackets
     -prep_telco: cleans up the telco dataframe to make analysis easier
     -split_telco_data: splits the telco dataframe into train, validate, test subsets
+    -cols_to_dummy: converts the train data set into an encoded version, dropping all string type columns
