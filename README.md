@@ -1,11 +1,13 @@
 # DESCRIPTION
 
-### This project is conceived of as a way of exploring our customers through a database of information related to their accounts. Certain demographic information will be looked at, as well as what types of services and contracts they have, and charges, among others.  
+### This project is an exploration of our customers' churn through a database of information related to their accounts. Certain demographic information will be looked at, as well as what types of services and contracts they have, charges, and use behavior (e.g. tenure and churn).
+
+
 
 
 # GOALS
 
-### The goal of this project is to demonstrate that there are factors that are related to customer churn at Telco. We will be isolating some key factors so that recommendations can be made to reduce churn.
+### The goal of this project is to demonstrate factors related to customer churn at Telco, and to develop a machine learning model in an attempt to predict future churn. 
 
 # 
 
