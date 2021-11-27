@@ -40,7 +40,7 @@ def prep_telco(df):
     df.total_charges = df.total_charges.replace(' ',0)
     df.total_charges = df.total_charges.astype(float)
 
-    #delete the following two rows if they break your code
+    # the following lines create bins for the respective columns
     df['monthly_charges_bins']= pd.qcut(df['monthly_charges'], 5)
     df['total_charges_bins']= pd.qcut(df['total_charges'], 8)
     #df.total_charges_bins = df.total_charges_bins.astype(float)

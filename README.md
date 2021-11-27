@@ -1,15 +1,19 @@
-# DESCRIPTION
+## DESCRIPTION
 
 ### This project is an exploration of our customers' churn through a database of information related to their accounts. Certain demographic information will be looked at, as well as what types of services and contracts they have, charges, and use behavior (e.g. tenure and churn).
 
 
 
 
-# GOALS
+## GOALS
 
-### The goal of this project is to demonstrate factors related to customer churn at Telco, and to develop a machine learning model in an attempt to predict future churn. 
+### The goal of this project is to explore factors related to customer churn at Telco, and to develop a machine learning model in an attempt to predict future churn. 
 
-# 
+## PROJECT PLANNING (i.e. the data science pipeline)
+
+## REPRODUCABILITY
+
+## ANSWERS TO YOUR HYPOTHESES, KEY FINDINGS, RECOMMENDATIONS, TAKEAWAYS
 
 
 
@@ -75,3 +79,11 @@ Please note the following, user-defined functions used:
     -prep_telco: cleans up the telco dataframe to make analysis easier
     -split_telco_data: splits the telco dataframe into train, validate, test subsets
     -cols_to_dummy: converts the train data set into an encoded version, dropping all string type columns
+
+
+# Initial questions:
+1. Are those with dependents paying less?
+2. Are people with paperless billing being charged differently?
+3. Are people with longer tenure more loyal? Are they being charged more? Less?
+4. Are senior citizen being charged more for the same service?
+5. Is there a reason for the Fiber Optic churn, outside of price?
