@@ -73,7 +73,7 @@
  47  payment_type_Mailed check              7043 non-null   uint8  
 
 Please note the following, user-defined functions used:
-    - get_telco_data: accesses an existing csv file or creates one in its absence (using new_telco_data)
+    -get_telco_data: accesses an existing csv file or creates one in its absence (using new_telco_data)
     -new_telco_data: runs a SQL query to create a new Telco csv from the Codeup database
     -get_connection(db, user=user, host=host, password=password): uses my info from my env file to create a connection url to access the Codeup db. It takes in a string name of a database as an argument. The env file includes the username, password and host address as seen in the curly brackets
     -prep_telco: cleans up the telco dataframe to make analysis easier
@@ -81,9 +81,3 @@ Please note the following, user-defined functions used:
     -cols_to_dummy: converts the train data set into an encoded version, dropping all string type columns
 
 
-# Initial questions:
-1. Are those with dependents paying less?
-2. Are people with paperless billing being charged differently?
-3. Are people with longer tenure more loyal? Are they being charged more? Less?
-4. Are senior citizen being charged more for the same service?
-5. Is there a reason for the Fiber Optic churn, outside of price?
