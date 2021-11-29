@@ -11,12 +11,34 @@
 
 ## PROJECT PLANNING (i.e. the data science pipeline)
 
+### Wrangle the data: acquire from the Codeup database. Then clean, prep and split it into train, validate and test sets.  From here, I explored the data (from univariate to bivariate and multivariate, respectively), asking questions that I wanted to answer as I went.  Once the data had been explored to my satisfaction, I built different machine learning models in an attempt to predict which customers were most likely to churn.
+
 ## REPRODUCABILITY
+
+### The main tools needed to reproduce the project are the database itself, and numerous python imports (e.g. pandas, sklearn, numpy, etc--an exhaustive list can be referred to at the top of my code).  For graphing purposes, seaborns is handy, as is a knowledge of statistical testing that is available in the sklearn and other libraries available for python.
 
 ## ANSWERS TO YOUR HYPOTHESES, KEY FINDINGS, RECOMMENDATIONS, TAKEAWAYS
 
+## Research Question 1
+Are those with dependents paying less? What about their churn? We can see in the next cell that they churn less.
+### Answer to Research Question 1:
+Our chi^2 test shows that we can proceed with the understanding that customers with dependents churn less; additionally, it is clear from the charts that they are charged less but still provide a higher lifetime value.
 
+## Research Question 2
+We know that people with paperless billing they churn at a higher rate; could this be related to their contract type, or perhaps higher monthly charges?
+### Answer to Research Question 2:
+Our chi^2 test shows that we can proceed with the understanding that paperless billing is related to churn; these customers also pay more every month.
 
+## Research Question 3
+Are people with longer tenure creating more long-term value? 
+### Answer to Research Question 3:
+Our mann-whitney test shows that we can proceed with the understanding that tenure is related to churn, obvious as it may seem; customer churn goes down as their lifetime value (measured in total charges) goes up. Interestingly, there is a point at which total charges point to a higher level of churn--perhaps an area for further exploration. 
+
+## Research Question 4
+How does the electronic check payment method relates to higher churn?
+### Answer to Research Question 4:
+
+The seaborns charts and chi^2 test above demonstrate that paying by electronic check relates to higher churn--in spite of the fact that these customers are not paying very much more per month! One conclusion is that this form of payment relates to a lower commitment to the the company, and therefore higher churn.
 
 
 # DATA DICTIONARY
